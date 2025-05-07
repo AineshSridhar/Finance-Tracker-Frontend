@@ -21,11 +21,9 @@ const Dashboard = () => {
         >
             <ExpendituresWidget/>
             </Rnd>
-        </div>
-        <div className="w-full h-screen bg-gray-100 relative overflow-hidden">
             <Rnd default = {{
-                x: 70,
-                y: 30,
+                x: 400,
+                y: 50,
                 width: 320,
                 height: 240,
             }}
@@ -34,7 +32,7 @@ const Dashboard = () => {
             minHeight = {150}
             className="bg-white shadow rounded p-2"
         >
-            <Budget/>
+            <Budget/> 
             </Rnd>
         </div>
     </div>

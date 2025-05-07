@@ -7,7 +7,7 @@ const Budget = () => {
     const remaining = target - saved;
 
   return (
-    <div>
+    <div className="items-center w-full">
         <h2 className="text-lg font-bold mb-2 rounded-xl">Budget</h2>
         <ul></ul>
         <div className="w-full h-2 bg-gray-200 rounded">
@@ -15,9 +15,11 @@ const Budget = () => {
         </div>
 
         <div className="flex justify-between text-sm text-gray-600">
-            <span>USD{saved} saved so far/</span>
+            <span>Rs. {saved} saved so far/</span>
             <span>{percentage}%</span>
         </div>
+
+
     </div>
   )
 }
