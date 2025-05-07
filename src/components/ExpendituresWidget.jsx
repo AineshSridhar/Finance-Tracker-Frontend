@@ -9,7 +9,7 @@ const ExpendituresWidget = () => {
     
   return (
     <div>
-      <h2 className="text-lg font-bold mb-2 rounded-xl">Recent Expenditures</h2>
+      <h2 className="text-lg font-bold mb-2 rounded-xl">Today's Expenditures</h2>
       <ul className="space-y-1 text-sm">
         {data.map((item, i) => (
             <li key={i} className="flex justify-between">
@@ -17,8 +17,8 @@ const ExpendituresWidget = () => {
                 <span className="text-red-500">Rs.{item.amount}</span>
             </li>
         ))}
-        <div className="absolute bottom-2 left-4 right-4 text-sm text-gray-500 flex justify-between">
-            <span>Amount spent:</span>
+        <div className="absolute font-bold bottom-6 left-4 right-4 text-sm text-gray-500 flex justify-between">
+            <span>Amount spent today:</span>
             <span>5000</span>
         </div>
       </ul>
