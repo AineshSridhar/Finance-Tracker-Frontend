@@ -22,7 +22,7 @@ const Budget = () => {
             </div>
         </div>
 
-        <button className="mt-auto text-sm text-blue-500 border-blue-500 border py-1 rounded-sm">
+        <button className="mt-auto text-sm text-blue-500 border-blue-500 border py-1 rounded-sm cursor-pointer">
             View details
         </button>
     </div>

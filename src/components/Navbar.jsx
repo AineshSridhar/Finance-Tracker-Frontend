@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import { X, Menu } from "lucide-react";
 
-const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const Navbar = ({sidebarOpen, setSidebarOpen}) => {
 
   return (
     <>
       {/* Top Navbar */}
-      <nav className="flex justify-between items-center py-2 px-4 font-bold text-2xl bg-white shadow-md">
+      <nav className="flex justify-between items-center py-2 px-4 font-bold text-2xl bg-white shadow-md text-blue-500">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="text-xl"
+          className="text-xl cursor-pointer"
         >
-          {sidebarOpen ? <X size={28} /> : <Menu size={28} />}
+        <Menu size={28} />
         </button>
 
         <h1 className="mx-auto">Finance Tracker</h1>
@@ -31,18 +30,10 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="space-y-4">
-          <li><a href="#" className="block hover:text-blue-600">Dashboard</a></li>
+          <li><a href="/" className="block hover:text-blue-600">Dashboard</a></li>
           <li><a href="#" className="block hover:text-blue-600">Logout</a></li>
         </ul>
       </div>
-
-      {/* Overlay when sidebar is open */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-30 z-40"
-          onClick={() => setSidebarOpen(false)}
-        ></div>
-      )}
     </>
   );
 };
