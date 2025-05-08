@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Navbar */}
-      <nav className="flex justify-between items-center border py-2 px-4 font-bold text-2xl bg-white shadow-md">
+      <nav className="flex justify-between items-center py-2 px-4 font-bold text-2xl bg-white shadow-md">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="text-xl"

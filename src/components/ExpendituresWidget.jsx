@@ -14,7 +14,7 @@ const ExpendituresWidget = () => {
         {data.map((item, i) => (
             <li key={i} className="flex justify-between">
                 <span>{item.name}</span>
-                <span className="text-red-500">Rs.{item.amount}</span>
+                <span className="text-blue-500">Rs.{item.amount}</span>
             </li>
         ))}
         <div className="absolute font-bold bottom-6 left-4 right-4 text-sm text-gray-500 flex justify-between">
