@@ -28,13 +28,11 @@ const Dashboard = ({sidebarOpen}) => {
         isResizable={false}
         draggableHandle='.drag-handle'
       >
-        <div key="expenditures" className="bg-white shadow rounded p-4">
-            <div className="drag-handle cursor-move mb-2 text-gray-500">
-                &#x2630;
-            </div>
-            
-            <div className="cursor-pointer hover:shadow-lg transition" 
+        <div key="expenditures" className="h-full relative">
+            <div className="bg-white shadow rounded h-full w-full p-4 cursor-pointer hover:shadow-lg transition"
             onClick={() => navigate("/expenditures")}>
+                <div className="drag-handle absolute top-2 right-2 text-gray-500 cursor-move z-10"
+                onClick={(e) => e.stopPropagation()}>&#x2630;</div>
                 <ExpendituresWidget/>
             </div>
         </div>
