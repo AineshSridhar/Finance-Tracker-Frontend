@@ -39,8 +39,8 @@ const StockMarketWidget = () => {
     }
 
   return (
-    <div className="flex flex-col items-start justify-between p-4 h-full text-left">
-      <h2 className="text-xl font-bold">Stock Market Tracker</h2>
+    <div className="flex flex-col items-start justify-between p-4 w-full text-left">
+      <h2 className="text-lg font-bold">Stock Market Tracker</h2>
       <Line data={stockData} options = {options}/>
     </div>
   )

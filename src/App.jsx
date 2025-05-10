@@ -1,22 +1,33 @@
   import { useState } from 'react'
   import {Route, Routes} from 'react-router-dom'
   import './App.css'
-  import Navbar from './components/Navbar'
   import Dashboard from './pages/Dashboard'
   import Expenditures from './pages/Expenditures'
+  import Budget from './pages/Budget'
+  import Layout from './components/Layout'
 
   function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-      <>
-      <Navbar sidebarOpen={sidebarOpen} setSidebarOpen = {setSidebarOpen}/>
       <Routes>
-        <Route path = "/" element = {<Dashboard sidebarOpen={sidebarOpen} />} />
-        <Route path = "/expenditures" element = {<Expenditures />} />
+        <Route path = "/" element = {
+          <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+            <Dashboard />
+          </Layout>
+        } />
+        <Route path = "/expenditures" element = {
+          <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+            <Expenditures />
+          </Layout>
+        } />
+        <Route path = "/budget" element = {
+          <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+            <Budget />
+          </Layout>
+        } />
       </Routes>
-      </>
-    )
+    );
   }
 
   export default App
