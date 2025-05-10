@@ -6,7 +6,7 @@ const Navbar = ({sidebarOpen, setSidebarOpen}) => {
   return (
     <>
       {/* Top Navbar */}
-      <nav className="flex justify-between items-center py-2 px-4 font-bold text-2xl bg-white shadow-md text-blue-500">
+      <nav className="flex justify-between items-center py-4 px-4 font-bold text-2xl bg-white shadow-md text-blue-500">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="text-xl cursor-pointer"
