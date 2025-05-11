@@ -5,6 +5,7 @@
   import Expenditures from './pages/Expenditures'
   import Budget from './pages/Budget'
   import Layout from './components/Layout'
+  import Goals from './pages/Goals'
 
   function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -26,6 +27,11 @@
             <Budget />
           </Layout>
         } />
+        <Route path = "/goals" element = {
+          <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}>
+            <Goals/>
+          </Layout>
+        }/>
       </Routes>
     );
   }
